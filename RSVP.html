@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visszajelzés (RSVP) - Esküvő</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header-container">
+        <img src="kepeskuvorsvpre.jpg" alt="Esküvői borítókép" id="top-image">
+    </header>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="fooldal.html">Főoldal</a></li>
+            <li><a href="menetrend.html">Menetrend</a></li>
+            <li><a href="helyszin.html">Helyszín</a></li>
+            <li><a href="RSVP.html" class="active">RSVP</a></li>
+        </ul>
+    </nav>
+
+    <main class="content">
+        <h1>Visszajelzés (RSVP)</h1>
+        <p>Kérjük, töltsd ki az alábbi űrlapot, hogy tudjuk, számíthatunk-e rád!</p>
+
+        <form id="rsvp-form">
+            <div class="form-group">
+                <label for="nev">Név: *</label>
+                <input type="text" id="nev" name="nev" required placeholder="Add meg a neved">
+            </div>
+
+            <div class="form-group">
+                <label>Tudsz jönni? *</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="tudok_jonni" value="igen" id="jovok-igen" required> Igen</label>
+                    <label><input type="radio" name="tudok_jonni" value="nem" id="jovok-nem"> Nem</label>
+                </div>
+            </div>
+
+            <div id="extra-questions" style="display: none;">
+                <div class="form-group">
+                    <label>Templomi szertartáson ott leszel?</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="templomi" value="igen"> Igen</label>
+                        <label><input type="radio" name="templomi" value="nem"> Nem</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Polgári szertartáson ott leszel?</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="szertartas" value="igen"> Igen</label>
+                        <label><input type="radio" name="szertartas" value="nem"> Nem</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Vacsorán / bulin ott leszel?</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="vacsora_buli" value="igen"> Igen</label>
+                        <label><input type="radio" name="vacsora_buli" value="nem"> Nem</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="allergia">Ételallergia / érzékenység, egyéb kívánság:</label>
+                <input type="text" id="allergia" name="allergia" placeholder="Pl. laktózérzékeny, vegetáriánus...">
+            </div>
+
+            <div class="form-group">
+                <label>Gyereket hozol magaddal?</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="gyerek" value="igen" id="gyerek-igen"> Igen</label>
+                    <label><input type="radio" name="gyerek" value="nem" id="gyerek-nem"> Nem</label>
+                </div>
+            </div>
+
+            <div class="form-group" id="gyerek-szam-group" style="display: none;">
+                <label for="gyerekek_szama">Hány gyerekkel jössz?</label>
+                <input type="number" id="gyerekek_szama" name="gyerekek_szama" min="1" max="10" placeholder="Pl. 2">
+            </div>
+
+            <div class="form-group">
+                <label for="uzenet">Megjegyzés / Üzenet a párnak:</label>
+                <textarea id="uzenet" name="uzenet" rows="4" placeholder="Írj nekünk egy kedves üzenetet..."></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Visszajelzés elküldése</button>
+        </form>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
