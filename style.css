@@ -9,6 +9,7 @@ body {
 /* Felső kép tárolója */
 .header-container {
     width: 100%;
+    height: 300px;
     background: #fdfbf7; 
     text-align: center;
 }
