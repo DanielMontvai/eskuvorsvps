@@ -36,9 +36,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Űrlap elküldése
     const form = document.getElementById('rsvp-form');
     form.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        alert('Köszönjük a visszajelzést! Az adatokat sikeresen rögzítettük.');
+        alert('Köszönjük a visszajelzést! Az adatokat elküldtük.');
+    });
         
         // Form alaphelyzetbe állítása elküldés után
         form.reset();
