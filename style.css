@@ -2,8 +2,8 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f7f4ee;
-    color: #333333;
+    background-color: #faf8f5;
+    color: #4a4543;
 }
 
 /* Felső kép tárolója */
@@ -27,7 +27,7 @@ body {
 
 /* Menüsor */
 .navbar {
-    background-color: #4a2e2b;
+    background-color: #9c8473;
     text-align: center;
     padding: 12px 0;
 }
@@ -52,28 +52,28 @@ body {
 }
 
 .navbar a:hover, .navbar a.active {
-    color: #e07a5f;
+    color: #e3c4a8;
 }
 
 /* Tartalom / Forma */
 .content {
     max-width: 600px;
     margin: 40px auto;
-    background: white;
+    background: #ffffff;
     padding: 30px;
     border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.04);
 }
 
 .content h1, .content h2, .terkep-kiegeszito h3 {
     text-align: center;
-    color: #4a2e2b; 
+    color: #6b5b53; 
     margin-bottom: 10px;
 }
 
 .content > p {
     text-align: center;
-    color: #666;
+    color: #777675;
     margin-bottom: 30px;
 }
 
@@ -85,14 +85,17 @@ body {
     display: block;
     margin-bottom: 8px;
     font-weight: 600;
+    color: #555453;
 }
 
-.form-group input[type="text"] {
+.form-group input[type="text"], .form-group input[type="number"], .form-group textarea {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #e0dcd5;
     border-radius: 4px;
     box-sizing: border-box;
+    background-color: #fcfbfa;
+    font-family: inherit;
 }
 
 .radio-group {
@@ -106,15 +109,15 @@ body {
 }
 
 #extra-questions {
-    background: #fdfbf7;
+    background: #f7f5f0;
     padding: 15px;
     border-radius: 6px;
-    border-left: 4px solid #c05a33;
+    border-left: 4px solid #b8977e;
     margin-bottom: 20px;
 }
 
 .submit-btn {
-    background-color: #c05a33;
+    background-color: #9c8473;
     color: white;
     border: none;
     padding: 12px 20px;
@@ -127,16 +130,10 @@ body {
 }
 
 .submit-btn:hover {
-    background-color: #a84926;
+    background-color: #836d5d;
 }
 
 .form-group textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    font-family: inherit;
     resize: vertical; /* Csak függőlegesen lehessen átméretezni */
 }
 
@@ -164,7 +161,7 @@ body {
 }
 
 .helyszin-link a {
-    color: #4a5d4e;
+    color: #6b5b53;
     font-weight: bold;
     text-decoration: none;
     font-size: 18px;
@@ -185,16 +182,16 @@ body {
 .menetrend-elem {
     display: flex;
     align-items: flex-start;
-    background: #f9f9f9;
+    background: #fcfbfa;
     padding: 15px;
     border-radius: 6px;
-    border-left: 4px solid #4a5d4e;
+    border-left: 4px solid #b8977e;
 }
 
 .menetrend-elem .ido {
     font-size: 18px;
     font-weight: bold;
-    color: #4a2e2b !important;
+    color: #6b5b53 !important;
     min-width: 70px;
     padding-top: 2px;
 }
@@ -226,21 +223,21 @@ body {
     height: auto;      
     border-radius: 8px;
     object-fit: cover;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.12);
 }
 
 /* Kiegészítő méretű térkép szekció alul */
 .terkep-kiegeszito {
     margin-top: 40px;
-    background: #f9f9f9;
+    background: #fcfbfa;
     padding: 20px;
     border-radius: 8px;
-    border-left: 4px solid #c05a33 !important;
+    border-left: 4px solid #b8977e !important;
 }
 
 .terkep-kiegeszito h3 {
     margin-top: 0;
-    color: #4a5d4e;
+    color: #6b5b53;
     font-size: 18px;
 }
 
