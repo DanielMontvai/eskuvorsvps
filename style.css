@@ -210,3 +210,78 @@ body {
     color: #666;
     font-size: 14px;
 }
+
+/* Hangulatos képek: Nagyobbak, egymás mellett/alatt autoscale méretezéssel */
+.helyszin-kepek-nagy {
+    display: flex;
+    flex-direction: column; /* Egymás alá rendezzük őket, így gyönyörűen, teljes szélességben fognak terülni */
+    gap: 20px;
+    margin: 25px 0;
+    align-items: center;
+}
+
+.helyszin-kepek-nagy img {
+    width: 100%;       /* Kitölti a doboz teljes szélességét */
+    max-width: 100%;   /* Nem korlátozzuk 420px-re, így nagyok és részletgazdagok lesznek */
+    height: auto;      
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+/* Kiegészítő méretű térkép szekció alul */
+.terkep-kiegeszito {
+    margin-top: 40px;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #4a5d4e;
+}
+
+.terkep-kiegeszito h3 {
+    margin-top: 0;
+    color: #4a5d4e;
+    font-size: 18px;
+}
+
+.terkep-container {
+    width: 100%;
+    margin: 15px 0;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.terkep-container iframe {
+    display: block;
+    width: 100%;
+    height: 200px; 
+}
+
+@media screen and (max-width: 768px) {
+    /* A fő tartalomdoboz margóinak csökkentése mobilon, hogy ne lógjon ki */
+    .content {
+        margin: 15px 10px;
+        padding: 20px 15px;
+    }
+
+    /* A menüsor elemeinek átrendezése, hogy ne lógjanak egymásba */
+    .navbar li {
+        display: block;        /* Egymás alá kerülnek a menüpontok */
+        margin: 8px 0;         /* Kisebb térköz közöttük */
+    }
+
+    .navbar {
+        padding: 8px 0;
+    }
+
+    /* A menetrend időpont és leírás igazítása mobilra */
+    .menetrend-elem {
+        flex-direction: column; /* Mobilon az időpont a leírás fölé kerül */
+        gap: 5px;
+    }
+
+    .menetrend-elem .ido {
+        min-width: auto;
+    }
+}
