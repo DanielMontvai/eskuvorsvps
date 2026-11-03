@@ -171,6 +171,18 @@ body {
     text-decoration: underline;
 }
 
+/* Főoldali szöveges linkek stílusa */
+.content p a {
+    color: #9c8473; /* A menüsor és gombok barna színe */
+    font-weight: 600;
+    text-decoration: underline;
+    transition: color 0.3s;
+}
+
+.content p a:hover {
+    color: #836d5d; /* Sötétebb árnyalat hoverkor */
+}
+
 /* Menetrend stílusok */
 .menetrend-lista {
     margin-top: 25px;
@@ -281,4 +293,14 @@ body {
     .menetrend-elem .ido {
         min-width: auto;
     }
+}
+
+.tiszta-gif {
+    max-width: 100%;
+    width: 480px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    display: block;
+    margin: 0 auto;
 }
