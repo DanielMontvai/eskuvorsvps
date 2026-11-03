@@ -1,12 +1,16 @@
+/* =================================================================atia */
+/* 1. GLOBÁLIS ÉS ALAPSTÍLUSOK (Minden oldalra érvényes) */
+/* ================================================================= */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #faf8f5;
     color: #4a4543;
+    -webkit-text-size-adjust: 100%;
 }
 
-/* Felső kép tárolója */
+/* Felső kép alapok */
 .header-container {
     width: 100%;
     height: 350px;
@@ -16,16 +20,15 @@ body {
     align-items: center;
 }
 
-/* A kép maga */
 #top-image {
-    width: 100%;         
+    width: 100%;        
     height: 100%;
     object-fit: cover;
     object-position: center 30%;
-    display: block;      
+    display: block;       
 }
 
-/* Menüsor */
+/* Navigációs menüsor alapok */
 .navbar {
     background-color: #9c8473;
     text-align: center;
@@ -55,7 +58,7 @@ body {
     color: #e3c4a8;
 }
 
-/* Tartalom / Forma */
+/* Fő tartalom doboz */
 .content {
     max-width: 600px;
     margin: 40px auto;
@@ -63,6 +66,7 @@ body {
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+    box-sizing: border-box;
 }
 
 .content h1, .content h2, .terkep-kiegeszito h3 {
@@ -77,113 +81,63 @@ body {
     margin-bottom: 30px;
 }
 
-.form-group {
-    margin-bottom: 20px;
-}
 
-.form-group label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: 600;
-    color: #555453;
-}
-
-.form-group input[type="text"], .form-group input[type="number"], .form-group textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #e0dcd5;
-    border-radius: 4px;
-    box-sizing: border-box;
-    background-color: #fcfbfa;
-    font-family: inherit;
-}
-
-.radio-group {
-    display: flex;
-    gap: 20px;
-}
-
-.radio-group label {
-    font-weight: normal;
-    cursor: pointer;
-}
-
-#extra-questions {
-    background: #f7f5f0;
-    padding: 15px;
-    border-radius: 6px;
-    border-left: 4px solid #b8977e;
-    margin-bottom: 20px;
-}
-
-.submit-btn {
-    background-color: #9c8473;
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    width: 100%;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-.submit-btn:hover {
-    background-color: #836d5d;
-}
-
-.form-group textarea {
-    resize: vertical; /* Csak függőlegesen lehessen átméretezni */
-}
-
-/* Helyszín képek és link */
-.helyszin-kepek {
-    display: flex;
-    gap: 15px;
-    margin: 20px 0;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.helyszin-kepek img {
-    width: 100%;
-    max-width: 260px;
+/* ================================================================= */
+/* 2. FŐOLDAL STÍLUSAI */
+/* ================================================================= */
+.tiszta-gif {
+    max-width: 100%;
+    width: 480px;
     height: auto;
-    border-radius: 6px;
-    object-fit: cover;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    display: block;
+    margin: 0 auto;
 }
 
-.helyszin-link {
-    text-align: center;
-    margin-top: 25px;
-}
-
-.helyszin-link a {
-    color: #6b5b53;
-    font-weight: bold;
-    text-decoration: none;
-    font-size: 18px;
-}
-
-.helyszin-link a:hover {
-    text-decoration: underline;
-}
-
-/* Főoldali szöveges linkek stílusa */
 .content p a {
-    color: #9c8473; /* A menüsor és gombok barna színe */
+    color: #9c8473;
     font-weight: 600;
     text-decoration: underline;
     transition: color 0.3s;
 }
 
 .content p a:hover {
-    color: #836d5d; /* Sötétebb árnyalat hoverkor */
+    color: #836d5d;
 }
 
-/* Menetrend stílusok */
+
+/* ================================================================= */
+/* 3. MENETREND OLDAL STÍLUSAI */
+/* ================================================================= */
+body.menetrend-oldal {
+    background-color: #faf8f5;
+}
+
+body.menetrend-oldal .navbar {
+    background-color: #70292B; 
+}
+
+body.menetrend-oldal .navbar a:hover, 
+body.menetrend-oldal .navbar a.active {
+    color: #ffcccc;
+}
+
+.menetrend-kep-container {
+    width: 100%;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.menetrend-kep {
+    width: 100%;
+    max-height: 350px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: block;
+}
+
 .menetrend-lista {
     margin-top: 25px;
     display: flex;
@@ -212,33 +166,73 @@ body {
     margin: 0 0 5px 0;
     font-size: 18px;
     color: #333;
+    text-align: left !important;
 }
 
 .program-leiras p {
     margin: 0;
     color: #666;
     font-size: 14px;
+    text-align: left !important;
 }
 
-/* Hangulatos képek: Nagyobbak, egymás mellett/alatt autoscale méretezéssel */
+
+/* ================================================================= */
+/* 4. HELYSZÍN OLDAL STÍLUSAI */
+/* ================================================================= */
+body.helyszin-oldal {
+    background-color: #f4f6f0; 
+}
+
+body.helyszin-oldal .navbar {
+    background-color: #6b7a59; 
+}
+
+body.helyszin-oldal .navbar a:hover, 
+body.helyszin-oldal .navbar a.active {
+    color: #d2dfc4;
+}
+
+.header-container-dupla {
+    width: 100%;
+    height: 350px;
+    display: flex;
+    gap: 0;
+    overflow: hidden;
+}
+
+.dupla-kep {
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.bal-kep {
+    object-position: center 4%; 
+}
+
+.jobb-kep {
+    object-position: center 55%; 
+}
+
 .helyszin-kepek-nagy {
     display: flex;
-    flex-direction: column; /* Egymás alá rendezzük őket, így gyönyörűen, teljes szélességben fognak terülni */
+    flex-direction: column;
     gap: 20px;
     margin: 25px 0;
     align-items: center;
 }
 
 .helyszin-kepek-nagy img {
-    width: 100%;       /* Kitölti a doboz teljes szélességét */
-    max-width: 100%;   /* Nem korlátozzuk 420px-re, így nagyok és részletgazdagok lesznek */
-    height: auto;      
+    width: 100%;
+    max-width: 100%;
+    height: auto;
     border-radius: 8px;
     object-fit: cover;
     box-shadow: 0 4px 15px rgba(0,0,0,0.12);
 }
 
-/* Kiegészítő méretű térkép szekció alul */
 .terkep-kiegeszito {
     margin-top: 40px;
     background: #fcfbfa;
@@ -267,94 +261,32 @@ body {
     height: 200px; 
 }
 
-@media screen and (max-width: 768px) {
-    /* A fő tartalomdoboz margóinak csökkentése mobilon, hogy ne lógjon ki */
-    .content {
-        margin: 15px 10px;
-        padding: 20px 15px;
-    }
-
-    /* A menüsor elemeinek átrendezése, hogy ne lógjanak egymásba */
-    .navbar li {
-        display: block;        /* Egymás alá kerülnek a menüpontok */
-        margin: 8px 0;         /* Kisebb térköz közöttük */
-    }
-
-    .navbar {
-        padding: 8px 0;
-    }
-
-    /* A menetrend időpont és leírás igazítása mobilra */
-    .menetrend-elem {
-        flex-direction: column; /* Mobilon az időpont a leírás fölé kerül */
-        gap: 5px;
-    }
-
-    .menetrend-elem .ido {
-        min-width: auto;
-    }
-}
-
-.tiszta-gif {
-    max-width: 100%;
-    width: 480px;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-    display: block;
-    margin: 0 auto;
-}
-
-/* --- ALAPÉRTELMEZETT (FŐOLDAL) STÍLUSOK --- */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #faf8f5; /* Főoldal háttér */
-    color: #4a4543;
-}
-
-.navbar {
-    background-color: #9c8473; /* Főoldal menüszín */
+.helyszin-link {
     text-align: center;
-    padding: 12px 0;
+    margin-top: 25px;
 }
 
-/* --- 1. MENETREND OLDAL EGYEDI STÍLUSAI --- */
-body.menetrend-oldal {
-    background-color: #e6e8e300; /* Például egy lágy, hűvösebb háttér */
+.helyszin-link a {
+    color: #6b5b53;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 18px;
 }
 
-body.menetrend-oldal .navbar {
-    background-color: #70292B; /* Kékes-szürkés menüsor */
+.helyszin-link a:hover {
+    text-decoration: underline;
 }
 
-body.menetrend-oldal .navbar a:hover, 
-body.menetrend-oldal .navbar a.active {
-    color: #b0c4de;
-}
 
-/* --- 2. HELYSZÍN OLDAL EGYEDI STÍLUSAI --- */
-body.helyszin-oldal {
-    background-color: #f4f6f0; /* Zöldes/természetesebb háttér */
-}
-
-body.helyszin-oldal .navbar {
-    background-color: #6b7a59; /* Természetes zöldes menüsor */
-}
-
-body.helyszin-oldal .navbar a:hover, 
-body.helyszin-oldal .navbar a.active {
-    color: #d2dfc4;
-}
-
-/* --- 3. RSVP OLDAL EGYEDI STÍLUSAI --- */
+/* ================================================================= */
+/* 5. RSVP OLDAL STÍLUSAI ÉS MOBIL-OPTIMALIZÁLÁSA */
+/* ================================================================= */
 body.rsvp-oldal {
-    background-color: #f9f4f5; /* Púderesebb/melegebb háttér */
+    background-color: #f9f4f5; 
 }
 
 body.rsvp-oldal .navbar {
-    background-color: #CB6843; /* Mályvás/rózsás menüsor */
+    background-color: #CB6843; 
 }
 
 body.rsvp-oldal .navbar a:hover, 
@@ -362,75 +294,138 @@ body.rsvp-oldal .navbar a.active {
     color: #f2d6e0;
 }
 
-/* RSVP aloldali kép stílusa */
+body.rsvp-oldal #top-image {
+    object-position: center 45%; 
+}
+
 .rsvp-banner-container {
     text-align: center;
     margin: 25px auto 10px auto;
-    max-width: 600px; /* Igazíthatod a fő tartalomdoboz szélességéhez */
+    max-width: 600px;
     padding: 0 15px;
 }
 
 .rsvp-banner-img {
     width: 100%;
-    max-height: 300px; /* Ha nem akarod, hogy túl magas legyen */
+    max-height: 300px;
     object-fit: cover;
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.08);
     display: block;
 }
 
-/* RSVP oldal borítóképének igazítása */
-body.rsvp-oldal #top-image {
-    object-position: center 45%; /* Itt állíthatod: a 65% lejjebb tolja a fókuszpontot, így kevesebb látszik a tetejéből */
+/* Form elemek */
+.form-group {
+    margin-bottom: 20px;
 }
 
-/* Menetrend oldali TARDIS kép stílusa */
-.menetrend-kep-container {
-    width: 100%;
-    margin-bottom: 25px;
-    text-align: center;
-}
-
-.menetrend-kep {
-    width: 100%;
-    max-height: 350px; /* Beállítja, hogy ne legyen túl óriási */
-    object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+.form-group label {
     display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555453;
 }
 
-/* Dupla borítókép tároló a Helyszín oldalon */
-.header-container-dupla {
+.form-group input[type="text"], 
+.form-group input[type="number"], 
+.form-group textarea {
     width: 100%;
-    height: 350px; /* Ugyanolyan magasság, mint a többi fejléc */
+    padding: 12px; /* Kicsit nagyobb érintési felület mobilon */
+    border: 1px solid #e0dcd5;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #fcfbfa;
+    font-family: inherit;
+    font-size: 16px; /* Megakadályozza az iOS automata zoomolását fókuszáláskor */
+}
+
+/* Radio gombok reszponzív elrendezése */
+.radio-group {
     display: flex;
-    gap: 0; /* Nincs rés a két kép között, teljesen összeilleszkednek */
-    overflow: hidden;
+    flex-wrap: wrap; /* Mobilon átugorhatnak sorba ha kell */
+    gap: 20px;
 }
 
-/* Maguk a képek */
-.dupla-kep {
-    width: 50%; /* Pontosan fele-fele arányban osztoznak */
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    display: block;
+.radio-group label {
+    font-weight: normal;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 16px;
 }
 
-/* Mobilos nézet: ha mobilon inkább egymás alá kerülnének, vagy maradjanak fele-fele arányban */
+/* Rádiógombok méretének növelése mobilos kattintáshoz */
+.radio-group input[type="radio"] {
+    transform: scale(1.2);
+    margin: 0;
+    cursor: pointer;
+}
+
+#extra-questions {
+    background: #f7f5f0;
+    padding: 15px;
+    border-radius: 6px;
+    border-left: 4px solid #b8977e;
+    margin-bottom: 20px;
+    display: none; /* Alapból rejtett, JS nyitja */
+}
+
+.submit-btn {
+    background-color: #9c8473;
+    color: white;
+    border: none;
+    padding: 14px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    width: 100%;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #836d5d;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+
+/* ================================================================= */
+/* 6. RESPONSIVE / MOBIL NÉZET (Max szélesség: 768px) */
+/* ================================================================= */
 @media screen and (max-width: 768px) {
-    .header-container-dupla {
-        height: 250px; /* Kicsit alacsonyabb mobilon */
+    .content {
+        margin: 15px 10px;
+        padding: 20px 15px;
     }
-}
 
-/* Bal oldali kép egyedi fókuszpontja */
-.bal-kep {
-    object-position: center 4%; /* Itt állíthatod a bal oldali kép magasságát */
-}
+    .navbar li {
+        display: block;        
+        margin: 8px 0;        
+    }
 
-/* Jobb oldali kép egyedi fókuszpontja */
-.jobb-kep {
-    object-position: center 55%; /* Itt állíthatod a jobb oldali kép magasságát */
+    .navbar {
+        padding: 8px 0;
+    }
+
+    .menetrend-elem {
+        flex-direction: column; 
+        gap: 5px;
+    }
+
+    .menetrend-elem .ido {
+        min-width: auto;
+    }
+
+    .header-container-dupla {
+        height: 250px; 
+    }
+
+    /* Mobilon a rádiógombok is kényelmesebben férnek el */
+    .radio-group {
+        gap: 15px;
+    }
 }
