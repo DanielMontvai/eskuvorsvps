@@ -304,3 +304,82 @@ body {
     display: block;
     margin: 0 auto;
 }
+
+/* --- ALAPÉRTELMEZETT (FŐOLDAL) STÍLUSOK --- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #faf8f5; /* Főoldal háttér */
+    color: #4a4543;
+}
+
+.navbar {
+    background-color: #9c8473; /* Főoldal menüszín */
+    text-align: center;
+    padding: 12px 0;
+}
+
+/* --- 1. MENETREND OLDAL EGYEDI STÍLUSAI --- */
+body.menetrend-oldal {
+    background-color: #E6E8E3; /* Például egy lágy, hűvösebb háttér */
+}
+
+body.menetrend-oldal .navbar {
+    background-color: #CB6843; /* Kékes-szürkés menüsor */
+}
+
+body.menetrend-oldal .navbar a:hover, 
+body.menetrend-oldal .navbar a.active {
+    color: #b0c4de;
+}
+
+/* --- 2. HELYSZÍN OLDAL EGYEDI STÍLUSAI --- */
+body.helyszin-oldal {
+    background-color: #f4f6f0; /* Zöldes/természetesebb háttér */
+}
+
+body.helyszin-oldal .navbar {
+    background-color: #6b7a59; /* Természetes zöldes menüsor */
+}
+
+body.helyszin-oldal .navbar a:hover, 
+body.helyszin-oldal .navbar a.active {
+    color: #d2dfc4;
+}
+
+/* --- 3. RSVP OLDAL EGYEDI STÍLUSAI --- */
+body.rsvp-oldal {
+    background-color: #f9f4f5; /* Púderesebb/melegebb háttér */
+}
+
+body.rsvp-oldal .navbar {
+    background-color: #CB6843; /* Mályvás/rózsás menüsor */
+}
+
+body.rsvp-oldal .navbar a:hover, 
+body.rsvp-oldal .navbar a.active {
+    color: #f2d6e0;
+}
+
+/* RSVP aloldali kép stílusa */
+.rsvp-banner-container {
+    text-align: center;
+    margin: 25px auto 10px auto;
+    max-width: 600px; /* Igazíthatod a fő tartalomdoboz szélességéhez */
+    padding: 0 15px;
+}
+
+.rsvp-banner-img {
+    width: 100%;
+    max-height: 300px; /* Ha nem akarod, hogy túl magas legyen */
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    display: block;
+}
+
+/* RSVP oldal borítóképének igazítása */
+body.rsvp-oldal #top-image {
+    object-position: center 45%; /* Itt állíthatod: a 65% lejjebb tolja a fókuszpontot, így kevesebb látszik a tetejéből */
+}
