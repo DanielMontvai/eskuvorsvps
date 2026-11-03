@@ -33,7 +33,7 @@
         <form action="https://formspree.io/f/xwlvzknk" method="POST" id="rsvp-form">
             <div class="form-group">
                 <label for="nev">Név: *</label>
-                <input type="text" id="nev" name="nev" required placeholder="Add meg a neved">
+                <input type="text" id="nev" name="nev" required placeholder="Add meg a neved! Ha lehet, úgy hogy felismerjünk! :)">
             </div>
 
             <div class="form-group">
@@ -46,7 +46,7 @@
 
             <div id="extra-questions" style="display: none;">
                 <div class="form-group">
-                    <label>Templomi szertartáson ott leszel?</label>
+                    <label>Szertartáson ott leszek</label>
                     <div class="radio-group">
                         <label><input type="radio" name="templomi" value="igen"> Igen</label>
                         <label><input type="radio" name="templomi" value="nem"> Nem</label>
@@ -54,7 +54,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label>Polgári szertartáson ott leszel?</label>
+                    <label>Vacsorán ott leszek.</label>
                     <div class="radio-group">
                         <label><input type="radio" name="szertartas" value="igen"> Igen</label>
                         <label><input type="radio" name="szertartas" value="nem"> Nem</label>
@@ -62,10 +62,10 @@
                 </div>
 
                 <div class="form-group">
-                    <label>Vacsorán / bulin ott leszel?</label>
+                    <label>Maradok a bulira!</label>
                     <div class="radio-group">
-                        <label><input type="radio" name="vacsora_buli" value="igen"> Igen</label>
-                        <label><input type="radio" name="vacsora_buli" value="nem"> Nem</label>
+                        <label><input type="radio" name="vacsora_buli" value="igen"> Naná!</label>
+                        <label><input type="radio" name="vacsora_buli" value="nem"> Inkább megyek aludni, de ti érezzétek jól magatokat!</label>
                     </div>
                 </div>
             </div>
@@ -76,21 +76,11 @@
             </div>
 
             <div class="form-group">
-                <label>Gyereket hozol magaddal?</label>
-                <div class="radio-group">
-                    <label><input type="radio" name="gyerek" value="igen" id="gyerek-igen"> Igen</label>
-                    <label><input type="radio" name="gyerek" value="nem" id="gyerek-nem"> Nem</label>
-                </div>
-            </div>
-
-            <div class="form-group" id="gyerek-szam-group" style="display: none;">
-                <label for="gyerekek_szama">Hány gyerekkel jössz?</label>
-                <input type="number" id="gyerekek_szama" name="gyerekek_szama" min="1" max="10" placeholder="Pl. 2">
-            </div>
-
-            <div class="form-group">
                 <label for="uzenet">Megjegyzés / Üzenet a párnak:</label>
-                <textarea id="uzenet" name="uzenet" rows="4" placeholder="Írj nekünk egy kedves üzenetet..."></textarea>
+                <textarea id="uzenet" name="uzenet" rows="4" placeholder="Hoznál valakit magaddal? 
+Szükséged van valami extrára?
+Nagyon szeretsz minket és ezt mindenképp meg szeretnéd osztani velünk?
+Kérdés-kérés, óhaj-sóhaj, móka-kacagás? Itt írd meg nekünk!"></textarea>
             </div>
 
             <button type="submit" class="submit-btn">Visszajelzés elküldése</button>

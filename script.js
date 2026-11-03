@@ -15,24 +15,6 @@ document.addEventListener('DOMContentLoaded', function() {
     jovokIgen.addEventListener('change', toggleExtraQuestions);
     jovokNem.addEventListener('change', toggleExtraQuestions);
 
-    // Gyerekek száma feltételes megjelenítés
-    const gyerekIgen = document.getElementById('gyerek-igen');
-    const gyerekNem = document.getElementById('gyerek-nem');
-    const gyerekSzamGroup = document.getElementById('gyerek-szam-group');
-    const gyerekekSzamaInput = document.getElementById('gyerekek_szama');
-
-    function toggleGyerekSzam() {
-        if (gyerekIgen.checked) {
-            gyerekSzamGroup.style.display = 'block';
-        } else {
-            gyerekSzamGroup.style.display = 'none';
-            gyerekekSzamaInput.value = ''; // Mező kiürítése, ha Nemet választ
-        }
-    }
-
-    gyerekIgen.addEventListener('change', toggleGyerekSzam);
-    gyerekNem.addEventListener('change', toggleGyerekSzam);
-
     // Űrlap elküldése
     const form = document.getElementById('rsvp-form');
     form.addEventListener('submit', function(e) {
@@ -44,4 +26,4 @@ document.addEventListener('DOMContentLoaded', function() {
         extraQuestions.style.display = 'none';
         gyerekSzamGroup.style.display = 'none';
     });
-});
+
