@@ -322,11 +322,11 @@ body {
 
 /* --- 1. MENETREND OLDAL EGYEDI STÍLUSAI --- */
 body.menetrend-oldal {
-    background-color: #E6E8E3; /* Például egy lágy, hűvösebb háttér */
+    background-color: #e6e8e300; /* Például egy lágy, hűvösebb háttér */
 }
 
 body.menetrend-oldal .navbar {
-    background-color: #CB6843; /* Kékes-szürkés menüsor */
+    background-color: #70292B; /* Kékes-szürkés menüsor */
 }
 
 body.menetrend-oldal .navbar a:hover, 
@@ -382,4 +382,55 @@ body.rsvp-oldal .navbar a.active {
 /* RSVP oldal borítóképének igazítása */
 body.rsvp-oldal #top-image {
     object-position: center 45%; /* Itt állíthatod: a 65% lejjebb tolja a fókuszpontot, így kevesebb látszik a tetejéből */
+}
+
+/* Menetrend oldali TARDIS kép stílusa */
+.menetrend-kep-container {
+    width: 100%;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.menetrend-kep {
+    width: 100%;
+    max-height: 350px; /* Beállítja, hogy ne legyen túl óriási */
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: block;
+}
+
+/* Dupla borítókép tároló a Helyszín oldalon */
+.header-container-dupla {
+    width: 100%;
+    height: 350px; /* Ugyanolyan magasság, mint a többi fejléc */
+    display: flex;
+    gap: 0; /* Nincs rés a két kép között, teljesen összeilleszkednek */
+    overflow: hidden;
+}
+
+/* Maguk a képek */
+.dupla-kep {
+    width: 50%; /* Pontosan fele-fele arányban osztoznak */
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+/* Mobilos nézet: ha mobilon inkább egymás alá kerülnének, vagy maradjanak fele-fele arányban */
+@media screen and (max-width: 768px) {
+    .header-container-dupla {
+        height: 250px; /* Kicsit alacsonyabb mobilon */
+    }
+}
+
+/* Bal oldali kép egyedi fókuszpontja */
+.bal-kep {
+    object-position: center 4%; /* Itt állíthatod a bal oldali kép magasságát */
+}
+
+/* Jobb oldali kép egyedi fókuszpontja */
+.jobb-kep {
+    object-position: center 55%; /* Itt állíthatod a jobb oldali kép magasságát */
 }
